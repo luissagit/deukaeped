@@ -1,0 +1,51 @@
+@import url('materialize-icon.css');
+
+@font-face {
+	font-family : dcfont;
+	src: url('../assets/font/font.TTF');
+}
+
+.custom-font {
+	font-family :dcfont;
+}
+
+@media only screen and (min-width: 993px) {
+	.allmember-1 {
+		display : none;
+		height : 150px;
+	}
+}
+
+.custom-img {
+	height : 250px;
+	object-fit: cover;
+	object-position: top;
+}
+
+.homeElem p {
+	text-align : justify;
+	text-indent : 2em;
+}
+
+.gallery-card {
+	border : 0px solid gray;
+}
+
+.gallery-card img {
+	width : 100%;
+	object-fit: cover;
+	object-position: center;
+	margin : 0 auto;
+	padding : 6px;
+}
+
+.album-title {
+	border-bottom : 1px solid #DDDDDD;
+	padding-bottom : 5px;
+}
+
+.custom-footer {
+	padding-top : 0px;
+	padding-bottom : 5px;
+	border-top : 1px solid gray;
+}

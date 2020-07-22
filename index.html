@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>dreamcatcher-pedia</title>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="description" content="Learning about Dreamcatcher"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="shortcut icon" href="assets/logo/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<!-- Navigasi -->
+	<nav class="white" role="navigation">
+		<div class="nav-wrapper container">
+			<a href="#" class="brand-logo black-text custom-font" id="logo-container">dreamcatcher</a>
+			<a href="#" class="sidenav-trigger black-text" data-target="nav-mobile">☰</a>
+      
+			<ul class="topnav right hide-on-med-and-down"></ul>
+			<ul class="sidenav" id="nav-mobile"></ul>
+		</div>
+	</nav>
+	<!-- Akhir Navigasi -->
+	<div class="container" id="body-content"></div>
+	
+	
+	<footer class="page-footer custom-footer white">
+		<div class="footer-copyright white">
+			<div class="container black-text">
+				Made by Luissa Nugraha
+			</div>
+		</div>
+	</footer>
+			
+	<script src="js/materialize.min.js"></script>
+	<script src="js/nav.js"></script>	
+	
+	<script>
+		// REGISTER SERVICE WORKER
+		if ("serviceWorker" in navigator) {
+			window.addEventListener("load", function() {
+				navigator.serviceWorker
+				.register("/service-worker.js")
+				.then(function() {
+					console.log("Pendaftaran ServiceWorker berhasil");
+				})
+				.catch(function() {
+					console.log("Pendaftaran ServiceWorker gagal");
+				});
+			});
+		} else {
+			console.log("ServiceWorker belum didukung browser ini.");
+		}
+	</script>
+</body>
+</html>
